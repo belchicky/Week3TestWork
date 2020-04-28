@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81D1F6BB2458470900C828BA /* BruteForceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D1F6BA2458470900C828BA /* BruteForceOperation.swift */; };
 		9367CFD12092FCF600E9A359 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367CFD02092FCF600E9A359 /* Alert.swift */; };
 		9387B7182090BBFC007B9E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387B7172090BBFC007B9E0D /* AppDelegate.swift */; };
 		9387B71A2090BBFC007B9E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387B7192090BBFC007B9E0D /* ViewController.swift */; };
@@ -19,8 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81D1F6BA2458470900C828BA /* BruteForceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BruteForceOperation.swift; sourceTree = "<group>"; };
 		9367CFD02092FCF600E9A359 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		9387B7142090BBFC007B9E0D /* Week3TestWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week3TestWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9387B7142090BBFC007B9E0D /* Week4TestWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4TestWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9387B7172090BBFC007B9E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9387B7192090BBFC007B9E0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9387B71C2090BBFC007B9E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		9387B7152090BBFC007B9E0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9387B7142090BBFC007B9E0D /* Week3TestWork.app */,
+				9387B7142090BBFC007B9E0D /* Week4TestWork.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +76,7 @@
 			children = (
 				9387B7172090BBFC007B9E0D /* AppDelegate.swift */,
 				9387B7192090BBFC007B9E0D /* ViewController.swift */,
+				81D1F6BA2458470900C828BA /* BruteForceOperation.swift */,
 				9387B71B2090BBFC007B9E0D /* Main.storyboard */,
 				9387B72C2090CF66007B9E0D /* Password generator.swift */,
 				9367CFD02092FCF600E9A359 /* Alert.swift */,
@@ -118,7 +121,7 @@
 			);
 			name = Week3TestWork;
 			productName = Week3TestWork;
-			productReference = 9387B7142090BBFC007B9E0D /* Week3TestWork.app */;
+			productReference = 9387B7142090BBFC007B9E0D /* Week4TestWork.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -195,6 +198,7 @@
 				9387B71A2090BBFC007B9E0D /* ViewController.swift in Sources */,
 				9387B7182090BBFC007B9E0D /* AppDelegate.swift in Sources */,
 				9367CFD12092FCF600E9A359 /* Alert.swift in Sources */,
+				81D1F6BB2458470900C828BA /* BruteForceOperation.swift in Sources */,
 				9387B72D2090CF66007B9E0D /* Password generator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +351,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "e-legion.Week3TestWork";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Week4TestWork;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,7 +369,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "e-legion.Week3TestWork";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Week4TestWork;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

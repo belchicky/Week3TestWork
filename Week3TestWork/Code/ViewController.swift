@@ -57,16 +57,41 @@ class ViewController: UIViewController {
         start()
     }
     
-    private func start() {
+    private func bruteForceOperation(password: String) {
+        let requiredPassword = password
+        let operationQueue = OperationQueue()
         let startTime = Date()
-        let queue = DispatchQueue.global(qos: .userInitiated)
-        queue.async {
-            let result = self.bruteForce(startString: "0000", endString: "ZZZZ")            
-            DispatchQueue.main.async {
-                self.stop(password: result ?? "Error", startTime: startTime)
-                self.indicator.isHidden = true
+        
+        let operation1 = BruteForceOperation(startString: "0000", endString: "dddd", password: requiredPassword)
+        let operation2 = BruteForceOperation(startString: "eeee", endString: "tttt", password: requiredPassword)
+        let operation3 = BruteForceOperation(startString: "uuuu", endString: "JJJJ", password: requiredPassword)
+        let operation4 = BruteForceOperation(startString: "KKKK", endString: "ZZZZ", password: requiredPassword)
+        
+        let operationArray = [operation1, operation2, operation3, operation4]
+        
+        operationQueue.addOperations(operationArray, waitUntilFinished: false)
+        
+        for op in operationArray {
+            op.completionBlock = {
+                if let result = op.result {
+                    operationQueue.cancelAllOperations()
+                    OperationQueue.main.addOperation {
+                        self.stop(password: result , startTime: startTime)
+                        self.indicator.isHidden = true
+                    }
+                    
+                } else if op.isFinished == false {
+                    OperationQueue.main.addOperation {
+                        self.stop(password: "Error" , startTime: startTime)
+                        self.indicator.isHidden = true
+                    }
+                }
             }
         }
+    }
+    
+    private func start() {
+        bruteForceOperation(password: password)
     }
     
     // Возвращает подобранный пароль
